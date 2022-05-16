@@ -1,0 +1,28 @@
+[package]
+name = "stlb-seats-ft"
+version = "0.0.1"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+near-sdk = "=4.0.0-pre.8"
+near-contract-standards = "4.0.0-pre.8"
+near-units = "0.1.0"
+common = { path = "../common/" }
+
+[dependencies.serde_with]
+version = "1.11.0"
+default-features = false
+features = [ "macros" ]
+
+[dev-dependencies]
+near-sdk-sim = "4.0.0-pre.4"
+near-contract-standards = "4.0.0-pre.8"
+near-units = "0.1.0"
+
+[build-dependencies]
+common = {path = "../common/", default-features = false, features = []}

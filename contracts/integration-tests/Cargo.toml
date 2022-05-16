@@ -1,0 +1,16 @@
+[package]
+name = "stlb-ft-integration-tests"
+version = "0.0.1"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dev-dependencies]
+near-sdk = "4.0.0-pre.8"
+near-sdk-sim = "4.0.0-pre.8"
+near-contract-standards = "4.0.0-pre.8"
+near-units = "0.1.0"
+regex = "1.5.5"
+stlb-seats-ft = { path = "../seats" }
+common = { path = "../common", features = ["sim"] }
+

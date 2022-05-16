@@ -1,0 +1,21 @@
+[package]
+name = "common"
+version = "0.0.1"
+authors = ["Thiago Machado <thiago@keyko.io>"]
+edition = "2021"
+resolver = "2"
+
+[dependencies]
+near-sdk = {version = "4.0.0-pre.8", features = ["unstable"]}
+near-sdk-sim = {version = "4.0.0-pre.8", optional = true}
+near-units = "0.1.0"
+base64 = "0.13.0"
+regex = "1.5.5"
+
+[dependencies.contract-version]
+git = "https://github.com/keyko-io/contract-version.git"
+rev = "068746f"
+
+[features]
+default = []
+sim = ["near-sdk-sim"]
